@@ -7,6 +7,8 @@ series_path = '/mnt/nas/media/series'
 for series in tqdm(os.listdir(series_path)):
     season_path = os.path.join(series_path, series)
     for season in os.listdir(season_path):
+        if 'Season' not in season:
+            continue
         now_path = os.path.join(season_path, season)
         season_idx = int(season.split(' ')[-1])
         files = os.listdir(now_path)
