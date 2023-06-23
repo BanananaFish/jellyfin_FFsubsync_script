@@ -2,7 +2,7 @@ import os
 import subprocess
 from tqdm import tqdm
 
-movies_path = '/path/to/your/lib'
+movies_path = '/mnt/nas/media/movies'
 
 for movie in tqdm(os.listdir(movies_path)):
     now_path = os.path.join(movies_path, movie)
